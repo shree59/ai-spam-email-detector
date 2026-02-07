@@ -1,26 +1,43 @@
-# AI Spam Email Detector
+# 📧 AI Spam Email Detector (Java ML)
 
-A Java Spring Boot application that classifies incoming emails as Spam or Not Spam using a machine learning classification model.
+This project is a Java-based machine learning application that detects whether an incoming email message is **Spam** or **Not Spam** using text classification techniques.
+
+The system exposes REST APIs so that external applications can send email content and receive prediction results in real time.
+
+---
 
 ## Features
-- Email text analysis
-- Spam prediction
-- REST API endpoint
-- Machine learning classification
+- Email spam classification
+- Text preprocessing and tokenization
+- Machine learning model prediction
+- REST API integration
+- JSON request/response
+- Real-time filtering
+
+---
+
+## How it Works
+1. User sends email content to the API
+2. Text is cleaned and tokenized
+3. ML model analyzes the words
+4. System returns:
+   - SPAM
+   - NOT SPAM
+
+---
 
 ## Tech Stack
 - Java
-- Spring Boot
-- Machine Learning classifier
+- Machine Learning (Naive Bayes Classification)
+- Maven
 - REST API
+- JSON Processing
 
-## Example Request
-POST /spam/predict
+---
 
-Input:
-{
-  "message": "Congratulations! You won a free lottery ticket"
-}
+## API Endpoint
 
-Output:
-Spam
+### Predict Spam
+
+POST request:
+
